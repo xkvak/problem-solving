@@ -1,6 +1,7 @@
 # pylint: disable=too-few-public-methods
 from typing import Optional
 
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -23,8 +24,9 @@ class ListNode:
 
 
 class Solution:
-    """ leetcode 86. Partition List """
-    def partition(self, head: Optional[ListNode], x:int) -> Optional[ListNode]:
+    """leetcode 86. Partition List"""
+
+    def partition(self, head: Optional[ListNode], x: int) -> Optional[ListNode]:
         before, after = ListNode(), ListNode()
         before_head, after_head = before, after
 
@@ -36,10 +38,10 @@ class Solution:
                 after.next = ListNode(head.val)
                 after = after.next
             head = head.next
-        
+
         before.next = after_head.next
         return before_head.next
 
 
 if __name__ == "__main__":
-    print(Solution().partition(head = ListNode.from_array([1,4,3,2,5,2]), x = 3))
+    print(Solution().partition(head=ListNode.from_array([1, 4, 3, 2, 5, 2]), x=3))

@@ -1,4 +1,4 @@
-""" programmers pccp 4. 수레 움직이기"""
+"""programmers pccp 4. 수레 움직이기"""
 
 from collections import deque
 
@@ -34,7 +34,7 @@ def solution(maze):
                 red_nxt_postions = [red_pos]
                 break
 
-            nxt_red_pos = (red_y+ dy, red_x + dx)
+            nxt_red_pos = (red_y + dy, red_x + dx)
             nxt_red_y, nxt_red_x = nxt_red_pos
 
             if nxt_red_y < 0 or nxt_red_x < 0 or n <= nxt_red_y or m <= nxt_red_x:
@@ -68,10 +68,21 @@ def solution(maze):
                 if nxt_red_pos == blue_pos and nxt_blue_pos == red_pos:
                     continue
 
-                new_red_visited, new_blue_visited = red_visited.copy(), blue_visited.copy()
+                new_red_visited, new_blue_visited = (
+                    red_visited.copy(),
+                    blue_visited.copy(),
+                )
                 new_red_visited.add(nxt_red_pos)
                 new_blue_visited.add(nxt_blue_pos)
-                dq.append((nxt_red_pos, nxt_blue_pos, new_red_visited, new_blue_visited, turn + 1))
+                dq.append(
+                    (
+                        nxt_red_pos,
+                        nxt_blue_pos,
+                        new_red_visited,
+                        new_blue_visited,
+                        turn + 1,
+                    )
+                )
 
     return 0
 

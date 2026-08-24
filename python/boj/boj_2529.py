@@ -21,7 +21,7 @@ def main():
             max_result = max(max_result, res)
             min_result = min(min_result, res)
             return
-        
+
         for next in range(10):
             if next in num:
                 continue
@@ -36,6 +36,7 @@ def main():
 
     print(max_result)
     print(min_result)
+
 
 if __name__ == "__main__":
     main()

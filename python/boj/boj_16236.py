@@ -1,4 +1,4 @@
-""" 백준 16236. 아기 상어 """
+"""백준 16236. 아기 상어"""
 
 from collections import deque
 import sys
@@ -14,7 +14,7 @@ def sys_input() -> str:
 def solve(n: int, adj: list) -> int:
     ans = 0
     size = 2
-    inf = 10 ** 10
+    inf = 10**10
     curr = None
     for i, row in enumerate(adj):
         for j, v in enumerate(row):
@@ -54,6 +54,8 @@ def solve(n: int, adj: list) -> int:
 
 
 DIRECTIONS = [(1, 0), (0, 1), (-1, 0), (0, -1)]
+
+
 def count_distance(curr: tuple[int, int], adj, n, size):
     q = deque([curr])
     visited = [[0] * n for _ in range(n)]

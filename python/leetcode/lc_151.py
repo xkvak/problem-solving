@@ -1,6 +1,6 @@
 # pylint: disable=too-few-public-methods
 class Solution:
-    """ leetcode 151. Reverse Words in a String """
+    """leetcode 151. Reverse Words in a String"""
 
     def reverseWords(self, s: str) -> str:
         ans = ""
@@ -13,7 +13,7 @@ class Solution:
                 cnt = 0
                 while s[i - cnt] == " ":
                     cnt += 1
-                ans += s[i + 1: prev] + " "
+                ans += s[i + 1 : prev] + " "
                 i -= cnt
                 prev = i + 1
             i -= 1

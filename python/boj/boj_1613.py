@@ -1,4 +1,4 @@
-""" 백준 1613. 역사 """
+"""백준 1613. 역사"""
 
 import sys
 
@@ -35,6 +35,7 @@ def solve(n, k, arr, s, t):
         else:
             ans.append(0)
     return ans
+
 
 def main():
     n, k = map(int, sys_input().split())

@@ -3,7 +3,7 @@ from re import I
 
 
 class Solution:
-    """ leetcode 2958. Length of Longest Subarray With at Most K Frequency """
+    """leetcode 2958. Length of Longest Subarray With at Most K Frequency"""
 
     def maxSubarrayLength(self, nums: list[int], k: int) -> int:
         n = len(nums)
@@ -21,6 +21,6 @@ class Solution:
 
         return ans
 
-    
+
 if __name__ == "__main__":
-    print(Solution().maxSubarrayLength(nums = [1,2,3,1,2,3,1,2], k = 2))
+    print(Solution().maxSubarrayLength(nums=[1, 2, 3, 1, 2, 3, 1, 2], k=2))

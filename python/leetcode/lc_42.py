@@ -1,6 +1,6 @@
 # pylint: disable=too-few-public-methods
 class Solution:
-    """ leetcode 42. Trapping Rain Water """
+    """leetcode 42. Trapping Rain Water"""
 
     def trap(self, args) -> int:
         ans = 0
@@ -31,4 +31,4 @@ class Solution:
 
 
 if __name__ == "__main__":
-    print(Solution().trap([4,2,0,3,2,5]))
+    print(Solution().trap([4, 2, 0, 3, 2, 5]))

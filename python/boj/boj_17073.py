@@ -1,4 +1,4 @@
-""" 백준 17073.나무 위의 빗물 """
+"""백준 17073.나무 위의 빗물"""
 
 from collections import deque
 import sys

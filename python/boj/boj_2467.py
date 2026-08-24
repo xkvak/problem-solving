@@ -1,4 +1,4 @@
-""" 백준 2467. 용액 """
+"""백준 2467. 용액"""
 
 import sys
 
@@ -9,7 +9,7 @@ def sys_input() -> str:
 
 def solve(n, arr):
     ans = [0] * 2
-    min_val = 10 ** 10
+    min_val = 10**10
     left, right = 0, n - 1
     while left < right:
         diff = arr[left] + arr[right]
@@ -23,6 +23,7 @@ def solve(n, arr):
             left += 1
 
     return ans
+
 
 def main():
     n = int(sys_input())

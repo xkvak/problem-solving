@@ -1,9 +1,9 @@
 import sys
 
-
 sys_input = sys.stdin.readline
 n = int(sys_input())
 board = [list(sys_input().rstrip()) for _ in range(n)]
+
 
 def count_max_candy():
     max_cnt = 1
@@ -15,7 +15,7 @@ def count_max_candy():
             else:
                 cnt = 1
             max_cnt = max(max_cnt, cnt)
-            
+
         cnt = 1
         for moved_y in range(1, n):
             if board[moved_y][y] == board[moved_y - 1][y]:
@@ -24,6 +24,7 @@ def count_max_candy():
                 cnt = 1
             max_cnt = max(max_cnt, cnt)
     return max_cnt
+
 
 result = 0
 for y in range(n):

@@ -1,4 +1,4 @@
-""" 백준 11399. ATM """
+"""백준 11399. ATM"""
 
 import sys
 
@@ -21,7 +21,7 @@ def main():
     n = int(sys_stdin())
     arr = list(map(int, sys_stdin().split()))
     print(solve(arr))
-    
+
 
 if __name__ == "__main__":
     main()

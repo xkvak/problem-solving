@@ -1,6 +1,5 @@
 import sys
 
-
 sys_input = sys.stdin.readline
 a, b, c = map(int, sys_input().split())
 b = b * 2

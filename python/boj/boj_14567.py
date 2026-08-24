@@ -1,10 +1,12 @@
-""" 백준 14567. 선수과목 """
+"""백준 14567. 선수과목"""
+
 from collections import deque
 import sys
 
 
 def sys_input() -> str:
     return sys.stdin.readline().rstrip()
+
 
 def solve(n, d, indegree_cnt):
     result = [-1] * (n + 1)
@@ -24,6 +26,7 @@ def solve(n, d, indegree_cnt):
                 result[nxt] = result[curr] + 1
     return result
 
+
 def main():
     n, m = map(int, sys_input().split())
     d = [[] * (n + 1) for _ in range(n + 1)]
@@ -34,6 +37,7 @@ def main():
         indegree_cnt[b] += 1
 
     print(*solve(n, d, indegree_cnt)[1:])
+
 
 if __name__ == "__main__":
     main()

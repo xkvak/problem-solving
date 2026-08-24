@@ -31,5 +31,7 @@ def main():
     visited[ord(graph[0][0]) - 65] = True
     dfs(0, 0, 1)
     print(result)
+
+
 if __name__ == "__main__":
     main()

@@ -1,4 +1,4 @@
-""" 백준 10868. 최솟값 """
+"""백준 10868. 최솟값"""
 
 import sys
 
@@ -8,6 +8,7 @@ def sys_input() -> str:
 
 
 INF = 10**18
+
 
 def init_tree(arr: list):
     size = 1 << (len(arr) - 1).bit_length()

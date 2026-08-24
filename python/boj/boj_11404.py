@@ -1,10 +1,9 @@
 import sys
 
-
 sys_input = sys.stdin.readline
 n = int(sys_input())
 m = int(sys_input())
-INF = 0x3f3f3f3f
+INF = 0x3F3F3F3F
 adj = [list(INF for _ in range(n + 1)) for _ in range(n + 1)]
 
 for _ in range(m):

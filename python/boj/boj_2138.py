@@ -1,4 +1,4 @@
-""" 백준 2138. 전구와 스위치 """
+"""백준 2138. 전구와 스위치"""
 
 import sys
 
@@ -6,7 +6,10 @@ import sys
 def sys_input() -> str:
     return sys.stdin.readline().rstrip()
 
+
 INF = 10**9
+
+
 def solve(n, arr, t):
     def press(arr, i):
         for j in (i - 1, i, i + 1):

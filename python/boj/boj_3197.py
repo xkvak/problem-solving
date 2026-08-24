@@ -9,7 +9,7 @@ def main():
 
     swan_y, swan_x = 0, 0
     swan_queue = deque()
-    swan_visited = [[0] * m for _ in range(n)] 
+    swan_visited = [[0] * m for _ in range(n)]
     swan_tmp = deque()
     water_queue = deque()
     water_tmp = deque()
@@ -20,7 +20,7 @@ def main():
         for j in range(m):
             if graph[i][j] == "." or graph[i][j] == "L":
                 water_queue.appendleft((i, j))
-                water_visited[i][j] = 1 
+                water_visited[i][j] = 1
             if graph[i][j] == "L":
                 swan_y = i
                 swan_x = j
@@ -60,17 +60,18 @@ def main():
                 if my < 0 or mx < 0 or n <= my or m <= mx:
                     continue
                 if water_visited[my][mx] != 0:
-                    continue 
-                if graph[my][mx] == 'X':
+                    continue
+                if graph[my][mx] == "X":
                     water_tmp.append((my, mx))
                     water_visited[my][mx] = time
                     graph[my][mx] = "."
 
         swan_queue = swan_tmp
-        water_queue =  water_tmp
+        water_queue = water_tmp
         swan_tmp = deque()
         water_tmp = deque()
         time += 1
+
 
 if __name__ == "__main__":
     main()

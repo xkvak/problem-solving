@@ -1,7 +1,9 @@
 class Solution:
-    """ leetcode 3310. Remove Methods From Project """
+    """leetcode 3310. Remove Methods From Project"""
 
-    def reaminingMethods(self, n: int, k: int, invocations: list[list[int]]) -> list[int]:
+    def reaminingMethods(
+        self, n: int, k: int, invocations: list[list[int]]
+    ) -> list[int]:
         adj = [[] for _ in range(n)]
         visited = set([k])
         for a, b in invocations:
@@ -23,4 +25,8 @@ class Solution:
 
 
 if __name__ == "__main__":
-    print(Solution().reaminingMethods(n = 5, k = 0, invocations = [[1,2],[0,2],[0,1],[3,4]]))
+    print(
+        Solution().reaminingMethods(
+            n=5, k=0, invocations=[[1, 2], [0, 2], [0, 1], [3, 4]]
+        )
+    )

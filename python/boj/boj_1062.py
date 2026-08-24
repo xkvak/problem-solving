@@ -1,4 +1,4 @@
-""" 백준 1062. 가르침 """
+"""백준 1062. 가르침"""
 
 import sys
 
@@ -29,7 +29,7 @@ def solve(n, k, arr):
         return n
 
     ans = 0
-    base = ['a', 'n', 't', 'i', 'c']
+    base = ["a", "n", "t", "i", "c"]
     alphabet = [i for i in [chr(i) for i in range(97, 123)] if i not in base]
 
     combs = combinations(alphabet, k - 5)

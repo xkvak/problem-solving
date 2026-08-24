@@ -1,6 +1,5 @@
 import sys
 
-
 sys_input = sys.stdin.readline
 n, m = map(int, sys_input().split())
 a = [list(map(int, sys_input().split())) for _ in range(n)]

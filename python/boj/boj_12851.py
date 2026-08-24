@@ -1,7 +1,6 @@
 from collections import deque
 import sys
 
-
 MAX = 100001
 N, K = map(int, sys.stdin.readline().split())
 
@@ -22,7 +21,7 @@ while queue:
     for next in [curr * 2, curr + 1, curr - 1]:
         if next < 0 or MAX < next:
             continue
-            
+
         if visited[next] == 0:
             queue.appendleft(next)
             visited[next] = visited[curr] + 1

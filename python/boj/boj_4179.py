@@ -1,7 +1,6 @@
 from collections import deque
 import sys
 
-
 sys_input = sys.stdin.readline
 N, M = map(int, sys_input().split())
 graph = [list(sys_input().rstrip()) for _ in range(N)]
@@ -15,10 +14,10 @@ queue = deque()
 
 for y in range(N):
     for x in range(M):
-        if graph[y][x] == 'F':
+        if graph[y][x] == "F":
             fire_visited[y][x] = 1
             queue.appendleft((y, x))
-        elif graph[y][x] == 'J':
+        elif graph[y][x] == "J":
             hy = y
             hx = x
 
@@ -41,10 +40,10 @@ queue.append((hy, hx))
 result = 0
 while queue:
     y, x = queue.pop()
-    if y == 0 or x == 0 or y == N - 1 or x == M -1:
+    if y == 0 or x == 0 or y == N - 1 or x == M - 1:
         result = human_visited[y][x]
         break
-    
+
     for dy, dx in directions:
         my = y + dy
         mx = x + dx

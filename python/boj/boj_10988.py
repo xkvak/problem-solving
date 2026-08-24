@@ -1,6 +1,5 @@
 import sys
 
-
 word = sys.stdin.readline().strip()
 left, right = 0, len(word) - 1
 

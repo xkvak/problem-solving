@@ -1,7 +1,6 @@
 from collections import deque
 import sys
 
-
 sys_input = sys.stdin.readline
 n, m, v = map(int, sys_input().split())
 graph = list([] for _ in range(n + 1))
@@ -13,6 +12,7 @@ for _ in range(m):
 for i in range(1, n + 1):
     graph[i].sort()
 
+
 def bfs(graph: list, v):
     q = deque([v])
     visited = [v]
@@ -23,12 +23,17 @@ def bfs(graph: list, v):
                 q.append(nxt)
     return visited
 
+
 visited = [v]
+
+
 def dfs(graph: list, v):
-   for next in graph[v]:
-       if not next in visited:
-           visited.append(next)
-           dfs(graph, next)
+    for next in graph[v]:
+        if not next in visited:
+            visited.append(next)
+            dfs(graph, next)
+
+
 dfs(graph, v)
 
 print(*visited)

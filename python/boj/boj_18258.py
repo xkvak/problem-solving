@@ -1,6 +1,7 @@
 from collections import deque
 import sys
 
+
 def pr18258():
     sys_input = sys.stdin.readline
     queue = deque()
@@ -25,5 +26,6 @@ def pr18258():
         elif cmd[0] == "back":
             out.append(queue[0] if queue else "-1")
     sys.stdout.write("\n".join(out))
+
 
 pr18258()

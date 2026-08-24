@@ -1,7 +1,6 @@
 import copy
 import sys
 
-
 sys_input = sys.stdin.readline
 n, m = map(int, sys_input().split())
 graph = []
@@ -10,9 +9,12 @@ for i in range(n):
     row = list(map(int, sys_input().split()))
     graph.append(row)
     for j in range(m):
-        if 0 < row[j] < 6: cctv_positions.append((i, j))
+        if 0 < row[j] < 6:
+            cctv_positions.append((i, j))
 
 directions = [(1, 0), (0, 1), (-1, 0), (0, -1)]
+
+
 def watch(y, x, dir, graph):
     dy, dx = directions[dir]
     my, mx = y + dy, x + dx
@@ -27,14 +29,16 @@ def watch(y, x, dir, graph):
         my += dy
         mx += dx
 
+
 def recursive(idx, graph):
     if idx == len(cctv_positions):
         cnt = 0
         for i in range(n):
             for j in range(m):
-                if graph[i][j] == 0: cnt += 1
+                if graph[i][j] == 0:
+                    cnt += 1
         return cnt
-    
+
     result = 100
     cy, cx = cctv_positions[idx]
     cctv_type = graph[cy][cx]
@@ -71,5 +75,6 @@ def recursive(idx, graph):
         result = min(result, recursive(idx + 1, copy_graph))
 
     return result
+
 
 print(recursive(0, graph))

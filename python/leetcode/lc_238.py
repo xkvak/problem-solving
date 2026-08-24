@@ -1,6 +1,6 @@
 # pylint: disable=too-few-public-methods
 class Solution:
-    """ leetcode 238. Product of Array Except Self """
+    """leetcode 238. Product of Array Except Self"""
 
     def productExceptSelf(self, nums: list[int]) -> list[int]:
         ans = []
@@ -11,16 +11,16 @@ class Solution:
             num = nums[i]
             total *= num
             prefix[i] = total
-        
+
         total = 1
         for i in range(n - 1, -1, -1):
             num = nums[i]
             total *= num
             suffix[i] = total
-        
+
         for i in range(n):
             multi = prefix[i - 1] if 0 < i else 1
-            if i < n -1:
+            if i < n - 1:
                 multi *= suffix[i + 1]
             ans.append(multi)
         return ans

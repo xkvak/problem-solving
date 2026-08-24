@@ -1,4 +1,4 @@
-""" 백준 2623. 음악프로그램 """
+"""백준 2623. 음악프로그램"""
 
 from collections import deque
 import sys

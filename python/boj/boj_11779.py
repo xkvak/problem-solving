@@ -1,4 +1,5 @@
-""" 11779. 최소비용 구하기 2 """
+"""11779. 최소비용 구하기 2"""
+
 import heapq
 import sys
 
@@ -6,7 +7,10 @@ import sys
 def sys_input() -> str:
     return sys.stdin.readline().rstrip()
 
+
 INF = 0x3F3F3F3F
+
+
 def solve(n, adj, start, end):
     min_distances = [INF] * (n + 1)
     min_distances[start] = 0
@@ -30,6 +34,7 @@ def solve(n, adj, start, end):
     seq.append(start)
     return min_distances, list(reversed(seq))
 
+
 def main():
     n = int(sys_input())
     m = int(sys_input())
@@ -43,6 +48,7 @@ def main():
     print(distance[end])
     print(len(vistied))
     print(*vistied)
+
 
 if __name__ == "__main__":
     main()

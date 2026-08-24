@@ -2,8 +2,9 @@ from collections import deque
 import sys
 
 
-def dec(x): 
+def dec(x):
     return x - 1
+
 
 sys_input = sys.stdin.readline
 n, m = map(int, sys_input().split())
@@ -32,7 +33,7 @@ while queue:
                 continue
 
             visited[my][mx] = time
-            if graph[my][mx] == '0':
+            if graph[my][mx] == "0":
                 queue.append((my, mx))
                 queue_size += 1
             else:

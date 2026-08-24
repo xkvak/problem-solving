@@ -1,6 +1,6 @@
 # pylint: disable=too-few-public-methods
 class Solution:
-    """ leetcode 120. Triangle """
+    """leetcode 120. Triangle"""
 
     def minimumTotal(self, triangle: list[list[int]]) -> int:
         curr_row = [0]
@@ -14,10 +14,11 @@ class Solution:
                     nxt_row.append(curr_row[j - 1] + val)
                 else:
                     nxt_row.append(min(curr_row[j], curr_row[j - 1]) + val)
-                
+
             curr_row = nxt_row
 
         return min(curr_row)
 
+
 if __name__ == "__main__":
-    print(Solution().minimumTotal([[-1],[3,2],[1,-2,-1]]))
+    print(Solution().minimumTotal([[-1], [3, 2], [1, -2, -1]]))

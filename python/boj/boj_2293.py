@@ -1,10 +1,11 @@
-""" boj 2293. 동전 1 """
+"""boj 2293. 동전 1"""
 
 import sys
 
 
 def sys_input() -> str:
     return sys.stdin.readline().rstrip()
+
 
 def solve(n, k, arr):
     dp = [0] * (k + 1)
@@ -17,6 +18,7 @@ def solve(n, k, arr):
                 continue
             dp[price] += dp[prev]
     return dp[k]
+
 
 def main():
     n, k = map(int, sys_input().split())

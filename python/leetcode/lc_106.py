@@ -14,7 +14,8 @@ class TreeNode:
 
 
 class Solution:
-    """ leetcode 106. Construct Binary Tree from Inorder and Postorder Traversal """
+    """leetcode 106. Construct Binary Tree from Inorder and Postorder Traversal"""
+
     # def buildTree(self, inorder: list[int], postorder: list[int]) -> Optional[TreeNode]:
     #     postorder_stack = deque(postorder)
 
@@ -34,7 +35,7 @@ class Solution:
 
     #     ans = build(self, inorder)
     #     return ans
-    
+
     def buildTree(self, inorder: list[int], postorder: list[int]) -> Optional[TreeNode]:
         inorder_idx = {val: idx for idx, val in enumerate(inorder)}
         postorder_idx = len(postorder) - 1
@@ -44,7 +45,7 @@ class Solution:
 
             if left > right:
                 return None
-            
+
             root_val = postorder[postorder_idx]
             postorder_idx -= 1
 
@@ -57,7 +58,7 @@ class Solution:
 
         ans = build(0, len(inorder) - 1)
         return ans
-    
+
 
 if __name__ == "__main__":
-    print(Solution().buildTree(inorder = [9,3,15,20,7], postorder = [9,15,7,20,3]))
+    print(Solution().buildTree(inorder=[9, 3, 15, 20, 7], postorder=[9, 15, 7, 20, 3]))

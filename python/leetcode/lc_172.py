@@ -1,6 +1,6 @@
 # pylint: disable=too-few-public-methods
 class Solution:
-    """ leetcode 172. Factorial Trailing Zeroes """
+    """leetcode 172. Factorial Trailing Zeroes"""
 
     def trailingZeroes(self, n: int) -> int:
         ans = 0

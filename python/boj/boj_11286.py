@@ -2,7 +2,6 @@ from collections import Counter
 import heapq
 import sys
 
-
 sys_input = sys.stdin.readline
 n = int(sys_input())
 a = [int(sys_input()) for _ in range(n)]

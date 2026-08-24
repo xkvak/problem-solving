@@ -1,4 +1,5 @@
-""" code for 1753. 최단경로 """
+"""code for 1753. 최단경로"""
+
 import heapq
 import sys
 
@@ -6,7 +7,9 @@ import sys
 def sys_input() -> str:
     return sys.stdin.readline().rstrip()
 
-INF = 0x3f3f3f3f
+
+INF = 0x3F3F3F3F
+
 
 def solve(v, k, adj) -> list:
     heap = []
@@ -26,6 +29,7 @@ def solve(v, k, adj) -> list:
                 distance[nxt_idx] = min(distance[nxt_idx], new_dist)
     return distance
 
+
 def main():
     v, e = map(int, sys_input().split())
     k = int(sys_input())
@@ -38,6 +42,7 @@ def main():
     result = solve(v, k, adj)[1:]
     for i in range(v):
         print("INF" if result[i] == INF else result[i])
+
 
 if __name__ == "__main__":
     main()

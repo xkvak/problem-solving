@@ -1,6 +1,5 @@
 import sys
 
-
 sys_input = sys.stdin.readline
 n, k = map(int, sys_input().split())
 coins = list(int(sys_input().rstrip()) for _ in range(n))

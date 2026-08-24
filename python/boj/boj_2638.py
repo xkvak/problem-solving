@@ -1,4 +1,4 @@
-""" 백준 2638. 치즈 """
+"""백준 2638. 치즈"""
 
 from collections import deque
 import sys
@@ -6,6 +6,7 @@ import sys
 
 def sys_input() -> str:
     return sys.stdin.readline().rstrip()
+
 
 def solve(n, m, adj):
     directions = [(1, 0), (0, 1), (-1, 0), (0, -1)]
@@ -20,7 +21,7 @@ def solve(n, m, adj):
             cy, cx = dq.popleft()
             for dy, dx in directions:
                 my, mx = cy + dy, cx + dx
-                if my < 0 or mx < 0 or n <= my or m <=mx:
+                if my < 0 or mx < 0 or n <= my or m <= mx:
                     continue
 
                 if adj[my][mx] == 0 and visited[my][mx] == 0:
@@ -40,10 +41,12 @@ def solve(n, m, adj):
         if cheese_cnt == 0:
             return time
 
+
 def main():
     n, m = map(int, sys_input().split())
     adj = [list(map(int, sys_input().split())) for _ in range(n)]
     print(solve(n, m, adj))
+
 
 if __name__ == "__main__":
     main()

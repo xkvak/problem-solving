@@ -1,6 +1,5 @@
 import sys
 
-
 sys_input = sys.stdin.readline
 result = 0
 for _ in range(int(sys_input())):

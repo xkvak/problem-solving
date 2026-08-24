@@ -1,8 +1,9 @@
 # pylint: disable=too-few-public-methods
 from typing import Optional
 
+
 class ListNode:
-    """ Definition for singly-linked list. """
+    """Definition for singly-linked list."""
 
     def __init__(self, val=0, next=None):
         self.val = val
@@ -10,9 +11,11 @@ class ListNode:
 
 
 class Solution:
-    """ leetcode 92. Reverse Linked List 2 """
+    """leetcode 92. Reverse Linked List 2"""
 
-    def reverseBetween(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
+    def reverseBetween(
+        self, head: Optional[ListNode], left: int, right: int
+    ) -> Optional[ListNode]:
         start = ListNode(0, head)
         prev = start
         for _ in range(left - 1):

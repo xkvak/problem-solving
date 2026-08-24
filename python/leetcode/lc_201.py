@@ -1,6 +1,6 @@
 # pylint: disable=too-few-public-methods
 class Solution:
-    """ leetcode 201. Bitwise AND of Numbers Range """
+    """leetcode 201. Bitwise AND of Numbers Range"""
 
     def rangeBitwiseAnd(self, left: int, right: int) -> int:
         shift = 0

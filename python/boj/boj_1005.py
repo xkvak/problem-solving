@@ -1,10 +1,12 @@
-""" 백준 1005. ACM Craft """
+"""백준 1005. ACM Craft"""
+
 from collections import deque
 import sys
 
 
 def sys_input() -> str:
     return sys.stdin.readline().rstrip()
+
 
 def solve(n, times, adj, indegree_cnt, w):
     result = [0] * (n + 1)
@@ -23,6 +25,7 @@ def solve(n, times, adj, indegree_cnt, w):
                 dq.append(nxt)
     return result[w]
 
+
 def main():
     t = int(sys_input())
     for _ in range(t):
@@ -37,6 +40,6 @@ def main():
         w = int(sys_input())
         print(solve(n, times, adj, indegree_cnt, w))
 
+
 if __name__ == "__main__":
     main()
-    

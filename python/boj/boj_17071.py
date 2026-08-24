@@ -1,7 +1,6 @@
 from collections import deque
 import sys
 
-
 MAX = 500000
 n, k = map(int, sys.stdin.readline().split())
 
@@ -22,7 +21,7 @@ while queue:
     if visited[time % 2][k]:
         flag = True
         break
-    
+
     queue_size = len(queue)
     for i in range(queue_size):
         now = queue.pop()

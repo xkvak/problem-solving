@@ -1,5 +1,5 @@
 class Solution:
-    """ leetcode 221. Maximal Square """
+    """leetcode 221. Maximal Square"""
 
     def maximalSquare(self, matrix: list[list[str]]) -> int:
         ans = 0
@@ -16,8 +16,8 @@ class Solution:
                 dp[y][x] = min(dp[y - 1][x], dp[y][x - 1], dp[y - 1][x - 1]) + 1
                 ans = max(ans, dp[y][x])
 
-        return ans ** 2
+        return ans**2
 
 
 if __name__ == "__main__":
-    print(Solution().maximalSquare([["0","0"],["0","0"]]))
+    print(Solution().maximalSquare([["0", "0"], ["0", "0"]]))

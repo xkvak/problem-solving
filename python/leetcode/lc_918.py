@@ -1,6 +1,6 @@
 # pylint: disable=too-few-public-methods
 class Solution:
-    """ leetcode 918.  Maximum Sum Circular Subarray """
+    """leetcode 918.  Maximum Sum Circular Subarray"""
 
     def maxSubarraySumCircular(self, nums: list[int]) -> int:
         total = sum(nums)
@@ -19,4 +19,4 @@ class Solution:
 
 
 if __name__ == "__main__":
-    print(Solution().maxSubarraySumCircular(list([-3,-2,-3])))
+    print(Solution().maxSubarraySumCircular(list([-3, -2, -3])))

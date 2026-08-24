@@ -1,7 +1,6 @@
 from collections import deque
 import sys
 
-
 sys_input = sys.stdin.readline
 n, m = map(int, sys_input().split())
 a = [[] for _ in range(n + 1)]

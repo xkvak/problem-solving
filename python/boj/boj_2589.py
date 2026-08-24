@@ -1,10 +1,10 @@
 from collections import deque
 import sys
 
-
 sys_input = sys.stdin.readline
 n, m = map(int, sys_input().split())
 cell = [list(sys_input().rstrip()) for _ in range(n)]
+
 
 def bfs(start_y, start_x):
     directions = [[1, 0], [0, 1], [-1, 0], [0, -1]]
@@ -25,9 +25,9 @@ def bfs(start_y, start_x):
                 continue
             if visited[moved_y][moved_x]:
                 continue
-            if cell[moved_y][moved_x] == 'W':
+            if cell[moved_y][moved_x] == "W":
                 continue
-            
+
             visited[moved_y][moved_x] = visited[y][x] + 1
             max_distance = visited[moved_y][moved_x]
             queue.append([moved_y, moved_x])
@@ -37,7 +37,7 @@ def bfs(start_y, start_x):
 result = 0
 for y in range(n):
     for x in range(m):
-        if cell[y][x] == 'L':
+        if cell[y][x] == "L":
             result = max(result, bfs(y, x))
-            
+
 print(result)

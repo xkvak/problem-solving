@@ -1,13 +1,12 @@
 import sys
 
-
 intput = sys.stdin.readline
 n = int(sys_input().rstrip())
 mp, mf, ms, mv = map(int, sys_input().split())
 a = [list(map(int, sys_input().split())) for _ in range(n)]
 
 MAX = 7501
-min_cost = MAX 
+min_cost = MAX
 result = {}
 for i in range(1 << n):
     tp, tf, ts, tv, tcost = 0, 0, 0, 0, 0

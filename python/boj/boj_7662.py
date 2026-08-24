@@ -1,7 +1,6 @@
 import heapq
 import sys
 
-
 sys_input = sys.stdin.readline
 t = int(sys_input())
 for _ in range(t):

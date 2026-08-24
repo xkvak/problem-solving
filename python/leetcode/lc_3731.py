@@ -1,5 +1,5 @@
 class Solution:
-    """ leetcode 3731. Find Missing Elements """
+    """leetcode 3731. Find Missing Elements"""
 
     def findMissingElements(self, nums: list[int]) -> list[int]:
         min_num, max_num = min(nums), max(nums)
@@ -11,5 +11,6 @@ class Solution:
 
         return ans
 
+
 if __name__ == "__main__":
-    print(Solution().findMissingElements([7,8,6,9]))
+    print(Solution().findMissingElements([7, 8, 6, 9]))

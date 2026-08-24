@@ -1,4 +1,4 @@
-""" code for 11780. 플로이드2 """
+"""code for 11780. 플로이드2"""
 
 from collections import deque
 import sys
@@ -6,6 +6,7 @@ import sys
 
 def sys_input() -> str:
     return sys.stdin.readline().rstrip()
+
 
 def solve(n: int, adj: list, nxt: list) -> tuple[list, list]:
     for k in range(1, n + 1):
@@ -16,8 +17,9 @@ def solve(n: int, adj: list, nxt: list) -> tuple[list, list]:
                     nxt[i][j] = nxt[i][k]
     return adj, nxt
 
+
 def main():
-    inf = 0x3f3f3f3f
+    inf = 0x3F3F3F3F
     n = int(sys_input())
     m = int(sys_input())
     adj = [[inf for _ in range(n + 1)] for _ in range(n + 1)]
@@ -59,6 +61,7 @@ def main():
             while path:
                 result.append(path.popleft())
             print(*result)
+
 
 if __name__ == "__main__":
     main()

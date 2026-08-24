@@ -44,7 +44,7 @@ def main():
                     idx -= 1
                     new_row[idx] = graph[y][x]
             graph[y] = new_row
-    
+
     def merge_bottom():
         nonlocal graph
         for x in range(n):
@@ -102,18 +102,18 @@ def main():
 
         result = 0
         original_graph = copy.deepcopy(graph)
-        for merge in [merge_top,  merge_right, merge_bottom, merge_left]:
+        for merge in [merge_top, merge_right, merge_bottom, merge_left]:
             merge()
             result = max(result, tilt(depth + 1))
             graph = copy.deepcopy(original_graph)
 
         return result
 
-
     sys_input = sys.stdin.readline
     n = int(sys_input().rstrip())
     graph = [list(map(int, sys_input().split())) for _ in range(n)]
     print(tilt(0))
+
 
 if __name__ == "__main__":
     main()

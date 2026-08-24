@@ -1,6 +1,6 @@
 # pylint: disable=too-few-public-methods
 class Solution:
-    """ leetcode 80. Remove Duplicates from Sorted Array 2 """
+    """leetcode 80. Remove Duplicates from Sorted Array 2"""
 
     def removeDuplicates(self, nums: list[int]) -> int:
         n = len(nums)
@@ -10,7 +10,7 @@ class Solution:
             while nums[left] == nums[right] and right < n - 1:
                 right += 1
 
-            distance = right - left if right - left < 2  else 2
+            distance = right - left if right - left < 2 else 2
             for _ in range(distance):
                 nums[idx] = nums[left]
                 idx += 1
@@ -18,7 +18,7 @@ class Solution:
             left = right
             right += 1
 
-        distance = right - left if right - left < 2  else 2
+        distance = right - left if right - left < 2 else 2
         for _ in range(distance):
             nums[idx] = nums[left]
             idx += 1
@@ -30,4 +30,4 @@ class Solution:
 
 
 if __name__ == "__main__":
-    print(Solution().removeDuplicates([1,1,1]))
+    print(Solution().removeDuplicates([1, 1, 1]))

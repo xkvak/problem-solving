@@ -1,6 +1,6 @@
 # pylint: disable=too-few-public-methods
 class Solution:
-    """ leetcode 135. Candy """
+    """leetcode 135. Candy"""
 
     def candy(self, ratings: list[int]) -> int:
         n = len(ratings)
@@ -17,4 +17,4 @@ class Solution:
 
 
 if __name__ == "__main__":
-    print(Solution().candy([1,6,10,8,7,3,2]))
+    print(Solution().candy([1, 6, 10, 8, 7, 3, 2]))

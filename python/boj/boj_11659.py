@@ -1,6 +1,5 @@
 import sys
 
-
 sys_input = sys.stdin.readline
 n, m = map(int, sys_input().split())
 nums = list(map(int, sys_input().split()))

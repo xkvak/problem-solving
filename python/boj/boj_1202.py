@@ -2,7 +2,6 @@ import bisect
 import heapq
 import sys
 
-
 sys_input = sys.stdin.readline
 n, k = map(int, sys_input().split())
 crystal = [tuple(map(int, sys_input().split())) for _ in range(n)]

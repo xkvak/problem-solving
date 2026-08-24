@@ -1,4 +1,4 @@
-""" 백준 10942. 팰린드롬? """
+"""백준 10942. 팰린드롬?"""
 
 import sys
 
@@ -8,7 +8,7 @@ def sys_input() -> str:
 
 
 def solve(n, arr, m, questions):
-    dp = [[False]* n for _ in range(n)]
+    dp = [[False] * n for _ in range(n)]
 
     for i in range(n):
         dp[i][i] = 1

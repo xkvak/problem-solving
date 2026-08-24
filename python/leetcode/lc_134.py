@@ -1,6 +1,6 @@
 # pylint: disable=too-few-public-methods
 class Solution:
-    """ leetcode 134. Gas Station """
+    """leetcode 134. Gas Station"""
 
     def canCompleteCircuit(self, gas: list[int], cost: list[int]) -> int:
         ans = 0
@@ -14,7 +14,7 @@ class Solution:
                 ans = i + 1
             remaining_gas.append(gas[i] - cost[i])
         return ans if 0 <= sum(remaining_gas) else -1
-        
+
 
 if __name__ == "__main__":
-    print(Solution().canCompleteCircuit([2,3,4], [3,4,3]))
+    print(Solution().canCompleteCircuit([2, 3, 4], [3, 4, 3]))

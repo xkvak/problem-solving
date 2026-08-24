@@ -19,11 +19,11 @@ def a():
                 ans[i][height + n + i + 2] = "*"
             else:
                 ans[i][height - n + i + 1] = "*"
-                ans[i][height - n + i + 1 + height - i  + height - i] = "*"
+                ans[i][height - n + i + 1 + height - i + height - i] = "*"
 
     ans.reverse()
     for data in ans:
-        print("".join(x if isinstance(x, str) else ' ' for x in data))
+        print("".join(x if isinstance(x, str) else " " for x in data))
 
 
 def b():
@@ -32,7 +32,15 @@ def b():
         n = int(sys_input())
         arr = list(list(map(int, sys_input().split())) for _ in range(n))
         ans = "YES"
-        max_a, max_b, max_c, = 0, 0, 0
+        (
+            max_a,
+            max_b,
+            max_c,
+        ) = (
+            0,
+            0,
+            0,
+        )
         for i, (a, b, c, p) in enumerate(arr):
             max_a = max(a, max_a)
             max_b = max(b, max_b)
@@ -80,7 +88,6 @@ def c():
         if b_idx != -1:
             ans = max(ans, a + b)
     print(ans)
-
 
 
 def j():

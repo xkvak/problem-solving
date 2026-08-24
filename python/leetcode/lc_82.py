@@ -9,13 +9,14 @@ class ListNode:
         self.val = val
         self.next = next
 
+
 class Solution:
-    """ leetcode 82. Remove Duplicates from Sorted List2 """
+    """leetcode 82. Remove Duplicates from Sorted List2"""
 
     def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if not head.next:
             return None
-        
+
         cnt = {}
         while head.next:
             cnt[head.val] = cnt.get(head.val, 0) + 1
@@ -30,7 +31,7 @@ class Solution:
                 continue
             ans.next = ListNode(k, None)
             ans = ans.next
-        
+
         return copy.next
 
 

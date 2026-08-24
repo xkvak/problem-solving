@@ -1,10 +1,11 @@
-""" 2026 musinsa rookie 1차 문제 """
+"""2026 musinsa rookie 1차 문제"""
 
 import sys
 
 
 def sys_input() -> str:
     return sys.stdin.readline().rstrip()
+
 
 class Brand:
     size_measurements: dict[str, list[int]]
@@ -39,16 +40,17 @@ class Brand:
             return "DOWN"
         return "MISMATCH"
 
+
 def main():
     brands: dict[str, Brand] = {}
-    b, q = map(int, sys_input().split(','))
+    b, q = map(int, sys_input().split(","))
     for _ in range(b):
-        s, n = tuple(sys_input().split(','))
-        sizes = list(sys_input().split(',') for _ in range(int(n)))
+        s, n = tuple(sys_input().split(","))
+        sizes = list(sys_input().split(",") for _ in range(int(n)))
         brands[s] = Brand(sizes)
 
     for _ in range(q):
-        s, h, c, w = sys_input().split(',')
+        s, h, c, w = sys_input().split(",")
         if s in brands:
             print(f"{s},{brands[s].check(int(h), int(c), int(w))}")
         else:

@@ -1,9 +1,8 @@
 import heapq
 import sys
 
-
 sys_input = sys.stdin.readline
-n = int(sys_input())    
+n = int(sys_input())
 q = sorted([int(sys_input()) for _ in range(n)])
 result = 0
 
@@ -12,5 +11,7 @@ while 1 < len(q):
     result += new_deck
     heapq.heappush(q, new_deck)
 
-if n == 1: print(0)
-else: print(result)
+if n == 1:
+    print(0)
+else:
+    print(result)

@@ -2,7 +2,7 @@ from math import prod
 
 
 class Solution:
-    """ leetcode 3345. Smallest Divisible Digit Product I """
+    """leetcode 3345. Smallest Divisible Digit Product I"""
 
     def smallestNumber(self, n: int, t: int) -> int:
         while True:
@@ -11,7 +11,8 @@ class Solution:
             while curr:
                 ans *= curr % 10
                 curr //= 10
-            if ans % t == 0: return n
+            if ans % t == 0:
+                return n
             n += 1
 
 

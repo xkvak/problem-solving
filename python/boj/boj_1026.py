@@ -1,6 +1,5 @@
 import sys
 
-
 sys_input = sys.stdin.readline
 n = int(sys_input().rstrip())
 a = sorted(list(map(int, sys_input().split())))

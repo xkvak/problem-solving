@@ -1,6 +1,5 @@
 import sys
 
-
 sys_input = sys.stdin.readline
 n = int(sys_input())
 prices = [list(map(int, sys_input().split())) for _ in range(n)]

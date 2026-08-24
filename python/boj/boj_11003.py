@@ -1,4 +1,5 @@
-""" 백준 11003. 최솟값 찾기 """
+"""백준 11003. 최솟값 찾기"""
+
 from collections import deque
 import sys
 
@@ -6,7 +7,10 @@ import sys
 def sys_input() -> str:
     return sys.stdin.readline().strip()
 
+
 INF = pow(10, 10)
+
+
 def solve(n, l, a):
     result = []
     dq = deque()
@@ -21,6 +25,7 @@ def solve(n, l, a):
         result.append(a[dq[0]])
     return result
 
+
 def search_min_val(a):
     min_val = INF
     min_idx = -1
@@ -30,10 +35,12 @@ def search_min_val(a):
             min_idx = idx
     return (min_val, min_idx)
 
+
 def main():
     n, l = map(int, sys_input().split())
     a = list(map(int, sys_input().split()))
     print(*solve(n, l, a))
+
 
 if __name__ == "__main__":
     main()

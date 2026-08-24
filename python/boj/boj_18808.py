@@ -10,6 +10,7 @@ def rotate(sticker: list):
             res[j][n - 1 - i] = sticker[i][j]
     return res
 
+
 def can_paste(y, x, graph, sticker):
     row, col = len(sticker), len(sticker[0])
     for i in range(row):
@@ -18,12 +19,14 @@ def can_paste(y, x, graph, sticker):
                 return False
     return True
 
+
 def paste(y, x, graph, sticker):
     row, col = len(sticker), len(sticker[0])
     for i in range(row):
         for j in range(col):
             if sticker[i][j] == 1:
                 graph[y + i][x + j] = 1
+
 
 sys_input = sys.stdin.readline
 n, m, k = map(int, sys_input().split())
@@ -35,14 +38,16 @@ for _ in range(k):
     for _ in range(4):
         already_paste = False
         for y in range(n - row + 1):
-            if already_paste: break
+            if already_paste:
+                break
             for x in range(m - col + 1):
                 if can_paste(y, x, graph, sticker):
-                    paste(y, x, graph, sticker)                    
+                    paste(y, x, graph, sticker)
                     already_paste = True
                     break
 
-        if already_paste: break
+        if already_paste:
+            break
         sticker = rotate(sticker)
         row, col = len(sticker), len(sticker[0])
 cnt = 0

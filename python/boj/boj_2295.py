@@ -1,6 +1,5 @@
 import sys
 
-
 sys_input = sys.stdin.readline
 n = int(sys_input())
 nums = list(int(sys_input()) for _ in range(n))

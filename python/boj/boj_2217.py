@@ -1,6 +1,5 @@
 import sys
 
-
 sys_input = sys.stdin.readline
 n = int(sys_input())
 ropes = sorted([int(sys_input().rstrip()) for _ in range(n)])

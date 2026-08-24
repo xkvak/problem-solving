@@ -1,4 +1,4 @@
-""" 백준 1744. 수 묶기 """
+"""백준 1744. 수 묶기"""
 
 import sys
 
@@ -18,18 +18,17 @@ def solve(arr: list[int]):
         else:
             negative.append(num)
 
-
     positive.sort(reverse=True)
     for i in range(1, len(positive), 2):
         a, b = positive[i - 1], positive[i]
-        ans += (a * b)
+        ans += a * b
     if len(positive) % 2 == 1:
         ans += positive[-1]
 
     negative.sort()
     for i in range(1, len(negative), 2):
         a, b = negative[i - 1], negative[i]
-        ans += (a * b)
+        ans += a * b
     if len(negative) % 2 == 1:
         ans += negative[-1]
 

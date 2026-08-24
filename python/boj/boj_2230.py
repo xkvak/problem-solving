@@ -1,6 +1,5 @@
 import sys
 
-
 sys_input = sys.stdin.readline
 n, m = map(int, sys_input().split())
 a = sorted([int(sys_input()) for _ in range(n)])
@@ -12,10 +11,10 @@ while right < n:
     if diff == m:
         result = diff
         break
-    
+
     if diff < m:
         right += 1
-    else: 
+    else:
         result = min(result, diff)
         left += 1
 

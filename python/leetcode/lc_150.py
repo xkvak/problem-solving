@@ -4,7 +4,7 @@ import math
 
 
 class Solution:
-    """ leetcode 150. Evaluate Reversee Polish Notation """
+    """leetcode 150. Evaluate Reversee Polish Notation"""
 
     def evalRPN(self, tokens: list[str]) -> int:
         stack: deque[int] = deque()
@@ -20,11 +20,11 @@ class Solution:
                     stack.append(n2 * n1)
                 elif t == "/":
                     stack.append(math.trunc(n2 / n1))
-            else:                
+            else:
                 stack.append(int(t))
 
         return stack.pop()
 
 
 if __name__ == "__main__":
-    print(Solution().evalRPN(tokens = ["3","11","5","+","-"]))
+    print(Solution().evalRPN(tokens=["3", "11", "5", "+", "-"]))

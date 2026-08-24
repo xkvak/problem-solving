@@ -1,4 +1,4 @@
-""" 백준 16987. 계란으로 계란치기 """
+"""백준 16987. 계란으로 계란치기"""
 
 import sys
 
@@ -38,10 +38,11 @@ def solve(n, arr):
 
     return dfs(0)
 
+
 def main():
     n = int(sys_input())
     arr = [list(map(int, sys_input().split())) for _ in range(n)]
-    print(solve(n ,arr))
+    print(solve(n, arr))
 
 
 if __name__ == "__main__":
