@@ -1,5 +1,5 @@
-use std::io;
 use std::fmt::Write;
+use std::io;
 
 pub fn pr_4375() {
     let mut buffer = String::new();
@@ -7,8 +7,10 @@ pub fn pr_4375() {
         let mut sys_input = String::new();
         io::stdin().read_line(&mut sys_input).unwrap();
         let num = match sys_input.trim().parse::<u32>() {
-            Ok(num) => { num }
-            Err(_) => { break; }
+            Ok(num) => num,
+            Err(_) => {
+                break;
+            }
         };
 
         let mut ret = 1;
@@ -17,8 +19,7 @@ pub fn pr_4375() {
             if count % num == 0 {
                 writeln!(&mut buffer, "{}", ret).unwrap();
                 break;
-            }
-            else {
+            } else {
                 count = count * 10 + 1;
                 count %= num;
                 ret += 1;

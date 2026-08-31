@@ -1,7 +1,11 @@
 fn pr_2828() {
     let mut buffer = String::new();
     stdin().read_line(&mut buffer).unwrap();
-    let mut buffer:Vec<usize> = buffer.trim().split_ascii_whitespace().map(|x| x.trim().parse::<usize>().unwrap()).collect();
+    let mut buffer: Vec<usize> = buffer
+        .trim()
+        .split_ascii_whitespace()
+        .map(|x| x.trim().parse::<usize>().unwrap())
+        .collect();
     let (n, m) = (buffer[0], buffer[1]);
 
     let mut buffer = String::new();
@@ -16,17 +20,19 @@ fn pr_2828() {
     for _ in 0..j {
         let mut buffer = String::new();
         stdin().read_line(&mut buffer).unwrap();
-        let mut next= buffer.trim().parse::<usize>().unwrap();
+        let mut next = buffer.trim().parse::<usize>().unwrap();
 
         let end = start + m - 1;
 
-        if start <= next && next <= end {continue}
-        else {
-            if next < start { // go left
+        if start <= next && next <= end {
+            continue;
+        } else {
+            if next < start {
+                // go left
                 ret += start - next;
                 start = next;
-            }
-            else { // go right
+            } else {
+                // go right
                 start += next - end;
                 ret += next - end;
             }

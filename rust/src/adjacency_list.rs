@@ -1,6 +1,6 @@
 fn adjacency_list() {
     const V: usize = 10;
-    let mut adj:Vec<Vec<usize>> = vec![vec![]; V];
+    let mut adj: Vec<Vec<usize>> = vec![vec![]; V];
     adj[1].push(2);
     adj[2].push(1);
     adj[1].push(3);
@@ -22,7 +22,9 @@ fn go(i: &usize, adj: &Vec<Vec<usize>>, visited: &mut Vec<bool>) {
     visited[*i] = true;
 
     for there in &adj[*i] {
-        if visited[*there] { continue; }
+        if visited[*there] {
+            continue;
+        }
         go(&there, adj, visited);
     }
 }
