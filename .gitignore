@@ -16,3 +16,4 @@ testData
 **/target
 __pycache__/
 *.pyc
+.vscode
