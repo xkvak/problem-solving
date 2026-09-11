@@ -1,11 +1,10 @@
 # pylint: disable=too-few-public-methods
 
-from collections import deque
-from turtle import right
+
+# Definition for a binary tree node.
 from typing import Optional
 
 
-# Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
